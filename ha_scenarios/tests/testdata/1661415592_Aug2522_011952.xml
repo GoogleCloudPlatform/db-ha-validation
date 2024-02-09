@@ -1,0 +1,171 @@
+<!--
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Results xmlns="http://www.dominicgiles.com/swingbench">
+   <Overview>
+      <BenchmarkName>Order Entry (JDBC)</BenchmarkName>
+      <Comment>Simple Order Entry workload using client side JDBC calls for Appliction Continuity</Comment>
+      <TimeOfRun>Aug 25, 2022, 1:19:53 AM</TimeOfRun>
+      <TotalRunTime>0:02:00</TotalRunTime>
+      <TotalLogonTime>0:00:11</TotalLogonTime>
+      <TotalCompletedTransactions>12943</TotalCompletedTransactions>
+      <TotalFailedTransactions>1</TotalFailedTransactions>
+      <AverageTransactionsPerSecond>107.86</AverageTransactionsPerSecond>
+      <MaximumTransactionRate>7092</MaximumTransactionRate>
+   </Overview>
+   <Configuration>
+      <NumberOfUsers>60</NumberOfUsers>
+      <MinimumInterThinkTime>50</MinimumInterThinkTime>
+      <MaximumInterThinkTime>500</MaximumInterThinkTime>
+      <MinimumIntraThinkTime>0</MinimumIntraThinkTime>
+      <MaximumIntraThinkTime>0</MaximumIntraThinkTime>
+      <ConnectString>(DESCRIPTION=  (TRANSPORT_CONNECT_TIMEOUT=5)  (RETRY_COUNT=6)  (FAILOVER=ON)  (ADDRESS =    (PROTOCOL = TCP)    (HOST = mntrlscan.company.brisbane.com)    (PORT = 1521)  )  (CONNECT_DATA=    (SERVER = DEDICATED)    (SERVICE_NAME = soepdb_ac)  ))</ConnectString>
+      <TimingsIn>milliseconds</TimingsIn>
+      <WaitTillAllLogon>false</WaitTillAllLogon>
+      <Driver>oracle.jdbc.replay.OracleDataSourceImpl</Driver>
+      <ConnectionPoolSettings>
+         <PooledInitialLimit>40</PooledInitialLimit>
+         <PooledMinLimit>100</PooledMinLimit>
+         <PooledMaxLimit>100</PooledMaxLimit>
+         <PooledInactivityTimeOut>50</PooledInactivityTimeOut>
+         <PooledConnectionWaitTimeout>45</PooledConnectionWaitTimeout>
+         <PooledPropertyCheckInterval>10</PooledPropertyCheckInterval>
+         <PooledAbandonedConnectionTimeout>120</PooledAbandonedConnectionTimeout>
+      </ConnectionPoolSettings>
+   </Configuration>
+   <DMLResults>
+      <SelectStatements>124051</SelectStatements>
+      <InsertStatements>35747</InsertStatements>
+      <UpdateStatements>20779</UpdateStatements>
+      <DeleteStatements>0</DeleteStatements>
+      <CommitStatements>22445</CommitStatements>
+      <RollbackStatements>0</RollbackStatements>
+   </DMLResults>
+   <TransactionResults>
+      <Result id="Customer Registration">
+         <AverageResponse>126.73772504091653</AverageResponse>
+         <MinimumResponse>112</MinimumResponse>
+         <MaximumResponse>2360</MaximumResponse>
+         <TenthPrecentile>116</TenthPrecentile>
+         <TwentiethPercentile>117</TwentiethPercentile>
+         <ThirtiethPercentile>118</ThirtiethPercentile>
+         <FortiethPrecentile>118</FortiethPrecentile>
+         <FiftythPercentile>119</FiftythPercentile>
+         <SixtiethPercentile>120</SixtiethPercentile>
+         <SeventiethPercentile>121</SeventiethPercentile>
+         <EightiethPercentile>122</EightiethPercentile>
+         <NinetiethPercentile>123</NinetiethPercentile>
+         <TransactionCount>2444</TransactionCount>
+         <FailedTransactionCount>0</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+      <Result id="Update Customer Details">
+         <AverageResponse>79.95331069609507</AverageResponse>
+         <MinimumResponse>29</MinimumResponse>
+         <MaximumResponse>2291</MaximumResponse>
+         <TenthPrecentile>72</TenthPrecentile>
+         <TwentiethPercentile>73</TwentiethPercentile>
+         <ThirtiethPercentile>74</ThirtiethPercentile>
+         <FortiethPrecentile>74</FortiethPrecentile>
+         <FiftythPercentile>75</FiftythPercentile>
+         <SixtiethPercentile>75</SixtiethPercentile>
+         <SeventiethPercentile>76</SeventiethPercentile>
+         <EightiethPercentile>77</EightiethPercentile>
+         <NinetiethPercentile>78</NinetiethPercentile>
+         <TransactionCount>1178</TransactionCount>
+         <FailedTransactionCount>0</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+      <Result id="Browse Products">
+         <AverageResponse>226.37422771403354</AverageResponse>
+         <MinimumResponse>57</MinimumResponse>
+         <MaximumResponse>2342</MaximumResponse>
+         <TenthPrecentile>84</TenthPrecentile>
+         <TwentiethPercentile>117</TwentiethPercentile>
+         <ThirtiethPercentile>150</ThirtiethPercentile>
+         <FortiethPrecentile>186</FortiethPrecentile>
+         <FiftythPercentile>216</FiftythPercentile>
+         <SixtiethPercentile>251</SixtiethPercentile>
+         <SeventiethPercentile>288</SeventiethPercentile>
+         <EightiethPercentile>324</EightiethPercentile>
+         <NinetiethPercentile>355</NinetiethPercentile>
+         <TransactionCount>1133</TransactionCount>
+         <FailedTransactionCount>0</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+      <Result id="Order Products">
+         <AverageResponse>379.19037871033777</AverageResponse>
+         <MinimumResponse>85</MinimumResponse>
+         <MaximumResponse>3074</MaximumResponse>
+         <TenthPrecentile>223</TenthPrecentile>
+         <TwentiethPercentile>256</TwentiethPercentile>
+         <ThirtiethPercentile>289</ThirtiethPercentile>
+         <FortiethPrecentile>328</FortiethPrecentile>
+         <FiftythPercentile>359</FiftythPercentile>
+         <SixtiethPercentile>395</SixtiethPercentile>
+         <SeventiethPercentile>430</SeventiethPercentile>
+         <EightiethPercentile>466</EightiethPercentile>
+         <NinetiethPercentile>506</NinetiethPercentile>
+         <TransactionCount>5862</TransactionCount>
+         <FailedTransactionCount>0</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+      <Result id="Process Orders">
+         <AverageResponse>170.80887372013652</AverageResponse>
+         <MinimumResponse>145</MinimumResponse>
+         <MaximumResponse>2428</MaximumResponse>
+         <TenthPrecentile>148</TenthPrecentile>
+         <TwentiethPercentile>149</TwentiethPercentile>
+         <ThirtiethPercentile>151</ThirtiethPercentile>
+         <FortiethPrecentile>154</FortiethPrecentile>
+         <FiftythPercentile>156</FiftythPercentile>
+         <SixtiethPercentile>157</SixtiethPercentile>
+         <SeventiethPercentile>159</SeventiethPercentile>
+         <EightiethPercentile>161</EightiethPercentile>
+         <NinetiethPercentile>184</NinetiethPercentile>
+         <TransactionCount>586</TransactionCount>
+         <FailedTransactionCount>0</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+      <Result id="Browse Orders">
+         <AverageResponse>127.96724137931035</AverageResponse>
+         <MinimumResponse>71</MinimumResponse>
+         <MaximumResponse>2264</MaximumResponse>
+         <TenthPrecentile>90</TenthPrecentile>
+         <TwentiethPercentile>116</TwentiethPercentile>
+         <ThirtiethPercentile>118</ThirtiethPercentile>
+         <FortiethPrecentile>119</FortiethPrecentile>
+         <FiftythPercentile>120</FiftythPercentile>
+         <SixtiethPercentile>121</SixtiethPercentile>
+         <SeventiethPercentile>122</SeventiethPercentile>
+         <EightiethPercentile>123</EightiethPercentile>
+         <NinetiethPercentile>124</NinetiethPercentile>
+         <TransactionCount>1740</TransactionCount>
+         <FailedTransactionCount>1</FailedTransactionCount>
+         <RollbackCount>0</RollbackCount>
+      </Result>
+   </TransactionResults>
+   <ErrorsSummary>
+      <ErrorSummary>
+         <ErrorCode>-1</ErrorCode>
+         <ErrorDescription>No more data to read from socket</ErrorDescription>
+         <ErrorCount>1</ErrorCount>
+      </ErrorSummary>
+   </ErrorsSummary>
+   <BenchmarkMetrics>
+      <TPSReadings>1661415594771, 0, 1661415595771, 0, 1661415596772, 0, 1661415597772, 0, 1661415598772, 9666580, 1661415599772, 9666606, 1661415600772, 9666649, 1661415601773, 9666650, 1661415602773, 9666663, 1661415603773, 9666676, 1661415604773, 9666688, 1661415605774, 9666689, 1661415606774, 9666693, 1661415607774, 9666693, 1661415608774, 9666701, 1661415609775, 9666686, 1661415610775, 9666693, 1661415611775, 9666701, 1661415612775, 9666699, 1661415613776, 9666701, 1661415614776, 9666702, 1661415615776, 9666695, 1661415616777, 9666702, 1661415617777, 9666699, 1661415618777, 9666688, 1661415619777, 9666699, 1661415620778, 9666696, 1661415621778, 9666697, 1661415622778, 9666696, 1661415623778, 9666689, 1661415624779, 9666688, 1661415625779, 9666698, 1661415626779, 9666697, 1661415627780, 9666698, 1661415628780, 9666694, 1661415629780, 9666701, 1661415630780, 9666690, 1661415631780, 9666702, 1661415632780, 9666702, 1661415633781, 9666687, 1661415634781, 9666696, 1661415635781, 9666698, 1661415636781, 9666700, 1661415637782, 9666694, 1661415638782, 9666698, 1661415639782, 9666701, 1661415640782, 9666690, 1661415641782, 9666697, 1661415642782, 9666691, 1661415643783, 9666702, 1661415644783, 9666703, 1661415645783, 9666707, 1661415646783, 9666678, 1661415647783, 9666691, 1661415648783, 9666697, 1661415649784, 9666700, 1661415650784, 9666695, 1661415651784, 9666691, 1661415652784, 9666702, 1661415653784, 9666696, 1661415654784, 9666697, 1661415655785, 9666695, 1661415656785, 9666689, 1661415657785, 9666703, 1661415658785, 9666700, 1661415659785, 9666699, 1661415660785, 9666697, 1661415661786, 9666702, 1661415662786, 9666693, 1661415663786, 9666693, 1661415664786, 9666691, 1661415665786, 9666699, 1661415666786, 9666686, 1661415667787, 9666696, 1661415668787, 9666696, 1661415669787, 9666691, 1661415670787, 9666695, 1661415671787, 9666700, 1661415672788, 9666683, 1661415673788, 9666695, 1661415674788, 9666699, 1661415675788, 9666702, 1661415676788, 9666695, 1661415677788, 9666697, 1661415678789, 9666703, 1661415679789, 9666699, 1661415680789, 9666692, 1661415681789, 9666698, 1661415682789, 9666687, 1661415683790, 9666692, 1661415684790, 9666675, 1661415685790, 0, 1661415686790, 9666587, 1661415687790, 9666699, 1661415688790, 9666684, 1661415689791, 9666694, 1661415690791, 9666691, 1661415691791, 9666697, 1661415692791, 9666699, 1661415693791, 9666690, 1661415694791, 9666697, 1661415695792, 9666686, 1661415696792, 9666708, 1661415697792, 9666690, 1661415698792, 9666695, 1661415699792, 9666691, 1661415700792, 9666690, 1661415701793, 9666697, 1661415702793, 9666667, 1661415703793, 9666660, 1661415704793, 9666694, 1661415705793, 9666710, 1661415706793, 9666683, 1661415707794, 9666697, 1661415708794, 9666695, 1661415709794, 9666695, 1661415710794, 9666688, 1661415711794, 9666691, 1661415712794, 9666698, 1661415713795, 9666685,</TPSReadings>
+   </BenchmarkMetrics>
+</Results>

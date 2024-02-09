@@ -1,0 +1,26 @@
+{
+  "ssh_key_file":"/home/user/.ssh/id_rsa_bms_toolkit.ansible9",
+  "ssh_user_name": "ansible9",
+  "wwid_root_lun": "/dev/mapper/3600a09803831890a612b513161354445",
+  "wwid_asm_lun": "/dev/mapper/3600a09803831890a685d513161313445",
+  "swingbench_binary_location": "/home/user/swingbench/swingbench/bin/charbench",
+  "swingbench_config_file": "/home/user/swingbench/swingbench/configs/racscan_soepdb_ac_highertimeouts.xml",
+  "nodes": [
+    {  "node_name": "my-bms-svr005",
+       "host_ip": "192.16.30.1",
+       "dict_oracle_logs":
+        { "node1_asm_log" : "/u01/app/oracle/diag/asm/+asm/+ASM1/trace/alert_+ASM1.log",
+          "node1_crs_log" : "/u01/app/oracle/diag/crs/my-bms-svr005/crs/trace/alert.log",
+          "node1_db_log"  : "/u01/app/oracle/diag/rdbms/orcl/orcl1/trace/alert_orcl1.log"
+        }
+    },
+    {  "node_name": "my-bms-svr006",
+       "host_ip": "192.16.30.2",
+       "dict_oracle_logs":
+        { "node2_asm_log" : "/u01/app/oracle/diag/asm/+asm/+ASM2/trace/alert_+ASM2.log",
+          "node2_crs_log" : "/u01/app/oracle/diag/crs/my-bms-svr006/crs/trace/alert.log",
+          "node2_db_log"  : "/u01/app/oracle/diag/rdbms/orcl/orcl2/trace/alert_orcl2.log"
+        }
+    }
+  ]
+}
